@@ -11,7 +11,7 @@ package assignment2;
  */
 
 import java.util.Scanner; 
-  test test
+
 public class Assignment2 { 
 
     public static void main(String[] args) { 
