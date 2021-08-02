@@ -51,7 +51,11 @@ public class Assignment2 {
         orderList[4] = new Order("26/07/2021", 1, 35.60); 
 
          
-
+        System.out.println("Welcome to ABC toy shop! ");
+        System.out.println("Transaction Tracking: ");
+        System.out.println("1. Customer");
+        System.out.println("2. Supplier");
+        System.out.println("3. Products");
         System.out.println("===================="); 
 
         orderList[0].ordInfo(); 
