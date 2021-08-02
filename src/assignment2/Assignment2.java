@@ -25,7 +25,7 @@ public class Assignment2 {
         Scanner input = new Scanner(System.in); 
 
         String n,t; 
-        int choice;
+        int choice, choice2;
 
          
 
@@ -59,10 +59,17 @@ public class Assignment2 {
         System.out.println("3. Products");
         System.out.println("Please choose a task to carry on: ");
         choice = input.nextInt();
+        System.out.println("Tracking Transaction:");
+        System.out.println("1. Purchase");
+        System.out.println("2. Delivery");
+        System.out.println("3. Return");
+        System.out.println("Please choose a task to carry on: ");
+        choice2 = input.nextInt();
         System.out.println("===================="); 
 
         orderList[0].ordInfo(); 
-
+        
+                    
         for (int i=0; i<custList.length; i++) { 
 
             if (orderList[0].getOid()==custList[i].getId()) { 
