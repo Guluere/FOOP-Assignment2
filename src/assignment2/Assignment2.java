@@ -25,6 +25,7 @@ public class Assignment2 {
         Scanner input = new Scanner(System.in); 
 
         String n,t; 
+        int choice;
 
          
 
@@ -56,6 +57,8 @@ public class Assignment2 {
         System.out.println("1. Customer");
         System.out.println("2. Supplier");
         System.out.println("3. Products");
+        System.out.println("Please choose a task to carry on: ");
+        choice = input.nextInt();
         System.out.println("===================="); 
 
         orderList[0].ordInfo(); 
