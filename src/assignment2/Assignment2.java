@@ -69,8 +69,22 @@ public class Assignment2 {
 
         orderList[0].ordInfo(); 
         
-        if (choice == 1 && choice2 == 1)
+        switch(choice)
         {
+            case 1:
+                if (choice2 == 1)
+                {
+                    
+                }
+                else if(choice2 == 2)
+                    {
+                            
+                    }
+                else if(choice2 == 3)
+                    {
+                        
+                    }
+        }
              for (int i=0; i<custList.length; i++) { 
 
             if (orderList[0].getOid()==custList[i].getId()) { 
@@ -82,7 +96,7 @@ public class Assignment2 {
             } 
 
         } 
-        }            
+                    
        
 
         System.out.println("===================="); 
