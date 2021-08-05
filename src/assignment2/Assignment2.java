@@ -84,6 +84,35 @@ public class Assignment2 {
                     {
                         
                     }
+                break;
+            case 2:
+                if (choice2 == 1)
+                {
+                    
+                }
+                else if(choice2 == 2)
+                    {
+                            
+                    }
+                else if(choice2 == 3)
+                    {
+                        
+                    }
+                break;
+            case 3:
+                if (choice2 == 1)
+                {
+                    
+                }
+                else if(choice2 == 2)
+                    {
+                            
+                    }
+                else if(choice2 == 3)
+                    {
+                        
+                    }
+                break;
         }
              for (int i=0; i<custList.length; i++) { 
 
