@@ -13,6 +13,36 @@ package assignment2;
 import java.util.Scanner; 
 
 public class Assignment2 { 
+    static void secondChoice(int first)
+    {
+        Scanner input = new Scanner(System.in); 
+        int option;
+        System.out.println("Tracking Transaction:");
+        System.out.println("1. Purchase");
+        System.out.println("2. Delivery");
+        System.out.println("3. Return");
+        System.out.println("Please choose a task to carry on: ");
+        option = input.nextInt();
+        switch(option)
+        {
+            case 1:
+            {
+                
+            }
+            break;
+            case 2:
+            {
+                
+            }
+            break;
+            case 3:
+            {
+                
+            }
+            break;
+            default: System.out.println("Invalid Choice Selected..."); 
+        }
+    }
 
     public static void main(String[] args) { 
 
@@ -24,11 +54,8 @@ public class Assignment2 {
 
         Scanner input = new Scanner(System.in); 
 
-        String n,t; 
-        int choice, choice2;
-
-         
-
+        String n,t;
+        int option;
         //Create new customer 
 
         custList[0] = new Customer("James", "012-44444444"); 
@@ -58,61 +85,17 @@ public class Assignment2 {
         System.out.println("2. Supplier");
         System.out.println("3. Products");
         System.out.println("Please choose a task to carry on: ");
-        choice = input.nextInt();
-        System.out.println("Tracking Transaction:");
-        System.out.println("1. Purchase");
-        System.out.println("2. Delivery");
-        System.out.println("3. Return");
-        System.out.println("Please choose a task to carry on: ");
-        choice2 = input.nextInt();
+        option = input.nextInt();
         System.out.println("===================="); 
 
         orderList[0].ordInfo(); 
         
-        switch(choice)
+        switch(option)
         {
-            case 1:
-                if (choice2 == 1)
-                {
-                    
-                }
-                else if(choice2 == 2)
-                    {
-                            
-                    }
-                else if(choice2 == 3)
-                    {
-                        
-                    }
+            case 1, 2, 3: 
+                secondChoice(option);
                 break;
-            case 2:
-                if (choice2 == 1)
-                {
-                    
-                }
-                else if(choice2 == 2)
-                    {
-                            
-                    }
-                else if(choice2 == 3)
-                    {
-                        
-                    }
-                break;
-            case 3:
-                if (choice2 == 1)
-                {
-                    
-                }
-                else if(choice2 == 2)
-                    {
-                            
-                    }
-                else if(choice2 == 3)
-                    {
-                        
-                    }
-                break;
+            default: System.out.println("Invalid Choice Selected..."); 
         }
              for (int i=0; i<custList.length; i++) { 
 
@@ -125,9 +108,7 @@ public class Assignment2 {
             } 
 
         } 
-                    
        
-
         System.out.println("===================="); 
 
         System.out.println("Customer 1's orders"); //cid = 1 
