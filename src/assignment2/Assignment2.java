@@ -10,7 +10,12 @@ package assignment2;
  * @author chunc
  */
 
-import java.util.Scanner; 
+import java.util.Scanner;
+import java.sql.Connection;  
+import java.sql.DriverManager;  
+import java.sql.ResultSet;  
+import java.sql.SQLException;  
+import java.sql.Statement;  
 
 public class Assignment2 { 
     static void secondChoice(int first)
