@@ -21,65 +21,66 @@ package assignment2;
 
 class Customer {//keeps information of customer has getter setter
 
-    private int custID;
-    private String custName = "abc", custIC, custAdd, delivery,returnProd;
+    private int Id;
+    private String Name = "abc", Ic, Address, prodDelivery,prodReturn;
 
     public Customer() {
         
     }
 
-    public Customer(int custID, String custName,String delivery,String returnProd, String custIC, String custAdd) {
-        this.custID = custID;
-        this.custName = custName;
-        this.delivery=delivery;
-        this.returnProd=returnProd;
-        this.custIC = custIC;
-        this.custAdd = custAdd;
+    public Customer(int Id, String Name,String prodDelivery,String prodReturn, String Ic, String Address) {
+        this.Id = Id;
+        this.Name = Name;
+        this.Ic = Ic;
+        this.Address = Address;
+        this.prodDelivery = prodDelivery;
+        this.prodReturn = prodReturn;
+ 
     }
 
-    public int getCustID() {
-        return this.custID;
+    public int getId() {
+        return this.Id;
     }
 
-    public String getCustName() {
-        return this.custName;
+    public String getName() {
+        return this.Name;
     }
 
-    public String getCustIC() {
-        return this.custIC;
+    public String getIc() {
+        return this.Ic;
     }
 
-    public String getCustAdd() {
-        return this.custAdd;
+    public String getAddress() {
+        return this.Address;
     }
-     public String getDelivery() {
-        return this.delivery;
+     public String getProdDelivery() {
+        return this.prodDelivery;
     }
-      public String getReturnProd() {
-        return this.returnProd;
+      public String getProdReturn() {
+        return this.prodReturn;
     }
    
     
-    public void setCustID(int custID){
-        this.custID = custID;
+    public void setId(int Id){
+        this.Id = Id;
     }
     
-    public void setCustName(String custName){
-        this.custName = custName;
+    public void setName(String Name){
+        this.Name = Name;
     }
     
-    public void setCustIC(String custIC){
-        this.custIC = custIC;
+    public void setIc(String Ic){
+        this.Ic = Ic;
     }
     
-    public void setCustAdd(String custAdd){
-        this.custAdd = custAdd;
+    public void setAddress(String Address){
+        this.Address = Address;
     }
-     public String setDelivery(String delivery) {
-        return this.delivery;
+     public String setProdDelivery(String prodDelivery) {
+        return this.prodDelivery;
     }
-      public String setReturnProd(String returnProd) {
-        return this.returnProd;
+      public String setProdReturn(String prodReturn) {
+        return this.prodReturn;
     }
 
      

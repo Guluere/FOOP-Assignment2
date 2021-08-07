@@ -12,7 +12,7 @@ package assignment2;
 class Payment { //keeps information of payment has getter setter    //only collects card information 
 
     private double amount;
-    private String trans_type,issuing_bank,card_num;
+    private String transType,issueBank,cardNum;
   
 
     
@@ -21,9 +21,9 @@ class Payment { //keeps information of payment has getter setter    //only colle
 
     }
 
-    public Payment(double amount, String trans_type) {
+    public Payment(double amount, String transType) {
         this.amount = amount;
-        this.trans_type = trans_type;
+        this.transType = transType;
         
     }
     
@@ -32,38 +32,38 @@ class Payment { //keeps information of payment has getter setter    //only colle
     }
 
     public String getTrans() {
-        return trans_type;
+        return transType;
     }
 
     public void setAmount(double amount) {
         this.amount = amount;
     }
 
-    public void setTrans_type(String trans_type) {
-        this.trans_type = trans_type;
+    public void setTransType(String transType) {
+        this.transType = transType;
     }
 
-    public String getCard_num() {
-        return card_num;
+    public String getCardNum() {
+        return cardNum;
     }
 
-    public String getIssuing_bank() {
-        return issuing_bank;
+    public String getIssueBank() {
+        return issueBank;
     }
 
-    public void setCard_num(String card_num) {
-        this.card_num = card_num;
+    public void setCardNum(String cardNum) {
+        this.cardNum = cardNum;
     }
 
-    public void setIssuing_bank(String issuing_bank) {
-        this.issuing_bank = issuing_bank;
+    public void setIssueBank(String issueBank) {
+        this.issueBank = issueBank;
     }
-    public void creditCard(String card_num,String issuing_bank ){
+    public void creditCard(String cardNum,String issueBank ){
        
         System.out.println("Transaction carried out using Credit Card");
         
     }
-     public void debitCard(String card_num,String issuing_bank ){
+     public void debitCard(String cardNum,String issueBank ){
          
         System.out.println("Transaction carried out using debit Card");
         

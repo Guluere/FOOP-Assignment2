@@ -13,9 +13,9 @@ class Credit extends Payment{
     
     
     
-    public void creditCard(String card_num,String issuing_bank){ //displays the card infformation
-        System.out.println("This are the details: ");
-        System.out.println("Card Number : "+ card_num + " Issuing Bank: "+issuing_bank);
+    public void creditCard(String cardNum,String issueBank){ //displays the card infformation
+        System.out.println("These are the details: ");
+        System.out.println("Card Number : "+ cardNum + " Issuing Bank: "+issueBank);
     }
     
 }

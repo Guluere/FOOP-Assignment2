@@ -16,9 +16,9 @@ class Debit extends Payment{
         
     }
    
-    public void debitCard(String card_num, String issuing_bank){ //displays the card information
-        System.out.println("This are the details: ");
-        System.out.println("Card Number : "+ card_num + "Issuing Bank: "+issuing_bank);
+    public void debitCard(String cardNum, String issueBank){ //displays the card information
+        System.out.println("These are the details: ");
+        System.out.println("Card Number : "+ cardNum + "Issuing Bank: "+issueBank);
     }
     
 }

@@ -10,25 +10,25 @@ package assignment2;
  * @author user
  */
 class Product { //keeps information of product has getter setter 
-    private int prodID=0, prodQuan=0;
+    private int prodId=0, prodQuant=0;
     private String prodName="";
     private double prodPrice;
    
     public Product(){
         
     }
-    public Product(int prodID, String prodName, double prodPrice, int prodQuan) {
-        this.prodID = prodID;
+    public Product(int prodID, String prodName, double prodPrice, int prodQuant) {
+        this.prodId = prodID;
         this.prodName = prodName;
         
         this.prodPrice = prodPrice;
-        this.prodQuan = prodQuan;
+        this.prodQuant = prodQuant;
     }
 
 
 
     public int getProdID() {
-        return this.prodID;
+        return this.prodId;
     }
 
     public String getProdName() {
@@ -40,12 +40,12 @@ class Product { //keeps information of product has getter setter
     }
 
     public int getProdQuan() {
-        return this.prodQuan;
+        return this.prodQuant;
     }
     
   
     public void setProdID(int prodID){
-        this.prodID = prodID;
+        this.prodId = prodID;
     }
     
     public void setProdName(String prodName){
@@ -59,7 +59,7 @@ class Product { //keeps information of product has getter setter
     }
 
     public void setProdQuan(int prodQuan) {
-        this.prodQuan=prodQuan;
+        this.prodQuant=prodQuan;
     }
     
 }

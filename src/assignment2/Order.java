@@ -13,45 +13,38 @@ public class Order {
 
     private String date; 
 
-    private int oid; 
+    private int orderId; 
 
-    private int cid; 
-
-    private double total=0; 
-
-     
-
-    public static int ordCount=0; 
+    private int custId; 
 
      
 
     public Order(String date, int cid, double total) { 
-
-        ordCount++; 
+ 
 
         this.date = date; 
 
-        this.oid = ordCount; 
+        this.orderId = orderId;
 
-        this.cid = cid; 
+        this.custId = custId; 
 
-        this.total = total;  
-
-    } 
-
-     
-
-    public int getOid() { 
-
-        return this.oid; 
+         
 
     } 
 
      
 
-    public int getCid() { 
+    public int getOrderId() { 
 
-        return this.cid; 
+        return this.orderId; 
+
+    } 
+
+     
+
+    public int getCustId() { 
+
+        return this.custId; 
 
     } 
 
@@ -61,9 +54,9 @@ public class Order {
 
         System.out.println("Date: " + this.date); 
 
-        System.out.println("Ord Id: " + this.oid); 
+        System.out.println("Ord Id: " + this.orderId); 
 
-        System.out.println("Cust Id: " + this.cid); 
+        System.out.println("Cust Id: " + this.custId); 
 
     } 
 
