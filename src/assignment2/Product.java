@@ -17,8 +17,8 @@ class Product { //keeps information of product has getter setter
     public Product(){
         
     }
-    public Product(int prodID, String prodName, double prodPrice, int prodQuant) {
-        this.prodId = prodID;
+    public Product(int prodId, String prodName, double prodPrice, int prodQuant) {
+        this.prodId = prodId;
         this.prodName = prodName;
         
         this.prodPrice = prodPrice;
@@ -27,7 +27,7 @@ class Product { //keeps information of product has getter setter
 
 
 
-    public int getProdID() {
+    public int getProdId() {
         return this.prodId;
     }
 
@@ -39,13 +39,13 @@ class Product { //keeps information of product has getter setter
         return this.prodPrice;
     }
 
-    public int getProdQuan() {
+    public int getProdQuant() {
         return this.prodQuant;
     }
     
   
-    public void setProdID(int prodID){
-        this.prodId = prodID;
+    public void setProdId(int prodId){
+        this.prodId = prodId;
     }
     
     public void setProdName(String prodName){
@@ -58,8 +58,8 @@ class Product { //keeps information of product has getter setter
         this.prodPrice=prodPrice;
     }
 
-    public void setProdQuan(int prodQuan) {
-        this.prodQuant=prodQuan;
+    public void setProdQuant(int prodQuant) {
+        this.prodQuant=prodQuant;
     }
     
 }
