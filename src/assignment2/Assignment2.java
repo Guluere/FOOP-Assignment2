@@ -190,6 +190,7 @@ public class Assignment2 {
                             System.out.println("Product purchased:" + prod1.getProdName());
                             System.out.println("Product ID: " + prod1.getProdId());
                             System.out.println("Quantity:" + prod1.getProdQuant());
+                            System.out.println("Price:" + prod1.getProdPrice());
                         } else {
                             System.out.println("There are no record for this name");
                         }
@@ -202,6 +203,7 @@ public class Assignment2 {
                             System.out.println("Name:" + prod1.getProdName());
                             System.out.println("Purchased by:" + s1.getSuppName());
                             System.out.println("Quantity:" + prod1.getProdQuant());
+                            System.out.println("Price:" + prod1.getProdPrice());
                         } else {
                             System.out.println("There are no record for this name");
                         }
