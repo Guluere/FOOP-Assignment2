@@ -34,7 +34,7 @@ public class Assignment2 {
         
         Scanner input = new Scanner(System.in);
         String custName, custIc, custAddress, prodDelivery = null, prodReturn = null, prodName, orderDate, suppName, suppAddress, query, upSql, update;
-        int custId, prodId, prodQuant, orderId, suppId, userChoice1, nProdQuant = 0, calcProd;
+        int custId, prodId, prodQuant, orderId, suppId, userChoice1, nProdQuant = 0, calcProd, record;
         double prodPrice;
         
         Class.forName("org.mariadb.jdbc.Driver");
@@ -159,9 +159,56 @@ public class Assignment2 {
                     pstmm.setString(4, c1.getIc());
                     
                     pstmm.execute();
-                } 
+                }
+                case 3:
+                    System.out.println("Which would you like to track?:");
+                    System.out.println("1. Customer");
+                    System.out.println("2. Supplier");
+                    System.out.println("3. Product");
+                    record = input.nextInt();
                     
-            }
+                    if(record == 1) {
+                        System.out.println("Please enter the customer name:");
+                        input.nextLine();
+                        custName = input.nextLine();
+                        if(custName == c1.getName()) {
+                            System.out.println("Name:" + c1.getName());
+                            System.out.println("ID: " + c1.getId());
+                            System.out.println("IC: " + c1.getIc());
+                            System.out.println("Address: " + c1.getAddress());
+                        } else {
+                            System.out.println("There are no record for this name");
+                        }
+                    }
+                        
+                    if(record == 2) {
+                        System.out.println("Please enter the supplier name:");
+                        suppName = input.next();
+                        if(suppName == s1.getSuppName()) {
+                            System.out.println("ID:" + s1.getSuppId());
+                            System.out.println("Name: " + s1.getSuppName());
+                            System.out.println("Product purchased:" + prod1.getProdName());
+                            System.out.println("Product ID: " + prod1.getProdId());
+                            System.out.println("Quantity:" + prod1.getProdQuant());
+                        } else {
+                            System.out.println("There are no record for this name");
+                        }
+                    }
+                    if(record == 3) {
+                        System.out.println("Please enter the product name:");
+                        prodName = input.next();
+                        if(prodName == prod1.getProdName()) {
+                            System.out.println("Product ID:" + prod1.getProdId());
+                            System.out.println("Name:" + prod1.getProdName());
+                            System.out.println("Purchased by:" + s1.getSuppName());
+                            System.out.println("Quantity:" + prod1.getProdQuant());
+                        } else {
+                            System.out.println("There are no record for this name");
+                        }
+                    }
+                    }
+                    
+            
         }while( option!=5);
         // TODO code application logic here 
         //Create new customer 
