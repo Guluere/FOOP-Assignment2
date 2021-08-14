@@ -34,7 +34,7 @@ public class Assignment2 {
         
         Scanner input = new Scanner(System.in);
         String custName, custIc, custAddress, prodDelivery = null, prodReturn = null, prodName, orderDate, suppName, suppAddress, query, upSql, update;
-        int custId, prodId, prodQuant, orderId, suppId, userChoice1, nProdQuant = 0, calcProd, record;
+        int custId, prodId, prodQuant, orderId, suppId, userChoice1, ProdQuant = 0, calcProd, record;
         double prodPrice;
         
         Class.forName("org.mariadb.jdbc.Driver");
@@ -111,16 +111,18 @@ public class Assignment2 {
                         rs = pstmt2.executeQuery();
                         if (rs.next()) {
                             do {
-                                nProdQuant = rs.getInt(6);
+                                ProdQuant = rs.getInt(6);
                             } while (rs.next());
                         } else {
                             System.out.println("Null");
                         }
-                        calcProd = nProdQuant + prod1.getProdQuant();
-                        System.out.println("Balance in stock for id : " + prod1.getProdId() + " Is " + calcProd);
-                        update = "update product set quantity =? where prodId=?";
+                        calcProd = ProdQuant + prod1.getProdQuant();
+                        System.out.println("Stock has been updated");
+                        System.out.println("Updated stock for product ID " + prod1.getProdId() + " is " + prod1.getProdQuant());
+                        update = "update product set prodQuant =? where prodId=?";
                         PreparedStatement pstUP = con.prepareStatement(update);
-                        pstUP.setInt(1, calcProd);
+                        
+                        pstUP.setInt(1, prod1.getProdQuant());
                         pstUP.setInt(2, prod1.getProdId());
                         pstUP.executeUpdate();
                         break;
