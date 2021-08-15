@@ -172,22 +172,21 @@ public class Assignment2 {
                     
                     if(record == 1) {
                         System.out.println("Please enter the customer ID:");
-                        input.nextLine();
-                        custName = input.nextLine();
-                        if(custName == c1.getName()) {
+                        custId = input.nextInt();
+                        if(custId == c1.getId()) {
                             System.out.println("Name:" + c1.getName());
                             System.out.println("ID: " + c1.getId());
                             System.out.println("IC: " + c1.getIc());
                             System.out.println("Address: " + c1.getAddress());
                         } else {
-                            System.out.println("There are no record for this name");
+                            System.out.println("There are no record for this ID");
                         }
                     }
                         
                     if(record == 2) {
-                        System.out.println("Please enter the supplier name:");
-                        suppName = input.next();
-                        if(suppName == s1.getSuppName()) {
+                        System.out.println("Please enter the supplier ID:");
+                        suppId = input.nextInt();
+                        if(suppId == s1.getSuppId()) {
                             System.out.println("ID:" + s1.getSuppId());
                             System.out.println("Name: " + s1.getSuppName());
                             System.out.println("Product purchased:" + prod1.getProdName());
@@ -195,20 +194,20 @@ public class Assignment2 {
                             System.out.println("Quantity:" + prod1.getProdQuant());
                             System.out.println("Price:" + prod1.getProdPrice());
                         } else {
-                            System.out.println("There are no record for this name");
+                            System.out.println("There are no record for this ID");
                         }
                     }
                     if(record == 3) {
-                        System.out.println("Please enter the product name:");
-                        prodName = input.next();
-                        if(prodName == prod1.getProdName()) {
+                        System.out.println("Please enter the product ID:");
+                        prodId = input.nextInt();
+                        if(prodId == prod1.getProdId()) {
                             System.out.println("Product ID:" + prod1.getProdId());
                             System.out.println("Name:" + prod1.getProdName());
                             System.out.println("Purchased by:" + s1.getSuppName());
                             System.out.println("Quantity:" + prod1.getProdQuant());
                             System.out.println("Price:" + prod1.getProdPrice());
                         } else {
-                            System.out.println("There are no record for this name");
+                            System.out.println("There are no record for this ID");
                         }
                     }
                     }
