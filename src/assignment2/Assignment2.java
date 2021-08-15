@@ -94,6 +94,7 @@ public class Assignment2 {
                         preparedStmt.setString(5, s1.getSuppName());
                         preparedStmt.setDouble(6, prod1.getProdQuant());
                         preparedStmt.execute();
+                        break;
                        }
                        else
                        {
@@ -130,20 +131,20 @@ public class Assignment2 {
                 }   
                 case 2:
                 {
-                    System.out.println("\n What is the Customer's name? ");
+                    System.out.println("\n Enter the customers name? ");
                     input.nextLine();
                     custName = input.nextLine();
                     c1.setName(custName);
 
-                    System.out.println("\n What is the ic number? ");
+                    System.out.println("\n Enter the customers IC number ");
                     custIc = input.next();
                     c1.setIc(custIc);
 
-                    System.out.println("\n What is the id number? ");
+                    System.out.println("\n Enter the customers ID number ");
                     custId = input.nextInt();
                     c1.setId(custId);
 
-                    System.out.println("\n What is the customer's address? ");
+                    System.out.println("\n Enter the customers address ");
                     input.nextLine();
                     custAddress = input.nextLine();
                     c1.setAddress(custAddress);
@@ -161,6 +162,7 @@ public class Assignment2 {
                     pstmm.setString(4, c1.getIc());
                     
                     pstmm.execute();
+                    break;
                 }
                 case 3:
                     System.out.println("Which would you like to track?:");
