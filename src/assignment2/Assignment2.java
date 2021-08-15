@@ -174,8 +174,8 @@ public class Assignment2 {
                         System.out.println("Please enter the customer ID:");
                         custId = input.nextInt();
                         if(custId == c1.getId()) {
-                            System.out.println("Name:" + c1.getName());
                             System.out.println("ID: " + c1.getId());
+                            System.out.println("Name:" + c1.getName());
                             System.out.println("IC: " + c1.getIc());
                             System.out.println("Address: " + c1.getAddress());
                         } else {
