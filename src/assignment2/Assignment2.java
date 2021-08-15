@@ -165,6 +165,9 @@ public class Assignment2 {
                     break;
                 }
                 case 3:
+                    
+                    break;
+                case 4:
                     System.out.println("Which would you like to track?:");
                     System.out.println("1. Customer");
                     System.out.println("2. Supplier");
@@ -172,7 +175,7 @@ public class Assignment2 {
                     record = input.nextInt();
                     
                     if(record == 1) {
-                        System.out.println("Please enter the customer name:");
+                        System.out.println("Please enter the customer ID:");
                         input.nextLine();
                         custName = input.nextLine();
                         if(custName == c1.getName()) {
