@@ -63,10 +63,6 @@ public class Assignment2 {
                            System.out.println("\n Enter new product name ");
                            prodName = input.next();
                            prod1.setProdName(prodName);
-                           
-                           System.out.println("\n Enter id of the product ");
-                        prodId = input.nextInt();
-                        prod1.setProdId(prodId);
 
                         System.out.println("\n Enter price of the product ");
                         prodPrice = input.nextDouble();
@@ -84,15 +80,15 @@ public class Assignment2 {
                         prodQuant = input.nextInt();
                         prod1.setProdQuant(prodQuant);
                         
-                        query = "INSERT INTO product(prodId,prodName,prodPrice,SuppId,suppName,prodQuant)" + "values(?,?,?,?,?,?)";
+                        query = "INSERT INTO product(prodName,prodPrice,SuppId,suppName,prodQuant)" + "values(?,?,?,?,?)";
                         PreparedStatement preparedStmt = con.prepareStatement(query);
                         
-                        preparedStmt.setInt(1, prod1.getProdId());
-                        preparedStmt.setString(2, prod1.getProdName());
-                        preparedStmt.setDouble(3, prod1.getProdPrice());
-                        preparedStmt.setInt(4, s1.getSuppId());
-                        preparedStmt.setString(5, s1.getSuppName());
-                        preparedStmt.setDouble(6, prod1.getProdQuant());
+                        
+                        preparedStmt.setString(1, prod1.getProdName());
+                        preparedStmt.setDouble(2, prod1.getProdPrice());
+                        preparedStmt.setInt(3, s1.getSuppId());
+                        preparedStmt.setString(4, s1.getSuppName());
+                        preparedStmt.setDouble(5, prod1.getProdQuant());
                         preparedStmt.execute();
                         break;
                        }
