@@ -33,7 +33,7 @@ public class Assignment2 {
         Payment Deb1 =  new Debit();
         
         Scanner input = new Scanner(System.in);
-        String custName, custIc, custAddress, prodDelivery = null, prodReturn = null, prodName, orderDate, suppName, suppAddress, query, upSql, update;
+        String sql, sql1, custName, custIc, custAddress, prodDelivery = null, prodReturn = null, prodName, orderDate, suppName, suppAddress, query, upSql, update;
         int custId, prodId, prodQuant, orderId, suppId, userChoice1, ProdQuant = 0, calcProd, record;
         double prodPrice;
         
@@ -164,67 +164,72 @@ public class Assignment2 {
                     
                     break;
                 case 4:
-                    System.out.println("Which would you like to track?:");
-                    System.out.println("1. Customer");
-                    System.out.println("2. Supplier");
-                    System.out.println("3. Product");
-                    record = input.nextInt();
-                    
-                    if(record == 1) {
-                        System.out.println("Please enter the customer ID:");
-                        custId = input.nextInt();
-                        if(custId == c1.getId()) {
-                            System.out.println("ID: " + c1.getId());
-                            System.out.println("Name:" + c1.getName());
-                            System.out.println("IC: " + c1.getIc());
-                            System.out.println("Address: " + c1.getAddress());
+                    System.out.println("\n Displaying all");
+                    System.out.println(" =================\n");
+                    try {
+                        sql1 = "Select * from customer";
+                        rs = statement.executeQuery(sql1);
+                        System.out.println("|*******************************************************************************|");
+                        System.out.println("|\t\t\t\t    Customer    \t\t\t\t|");
+                        System.out.println("|*******************************************************************************|");
+                        System.out.println("| ID\t| Name\t| IC\t| Address\t\t|");
+                        System.out.println("|===============|===============|===============|===============|===============|");
+                        if (rs.next()) {
+                            do {
+                                System.out.println("| " + rs.getString(1) + "\t\t| " + rs.getString(2) + "\t\t| " + rs.getString(3) + "\t\t| " + rs.getString(4) + "\t\t|");
+                                System.out.println("|---------------|---------------|---------------|---------------|---------------|");
+                            } while (rs.next());
                         } else {
-                            System.out.println("There are no record for this ID");
+                            System.out.println("Null");
                         }
-                    }
+
+                        System.out.println("\n\n|***********************************************************************************************|");
+                        System.out.println("|\t\t\t\t\t    Supplier   \t\t\t\t\t|");
+                        System.out.println("|***********************************************************************************************|");
+                        System.out.println("| ID\t| Company Name\t\t|");
+                        System.out.println("|===============|===============|===============|===============|===============|===============|");
+                        upSql = "Select * from product";
+                        rs = statement.executeQuery(upSql);
+                        if (rs.next()) {
+                            do {
+                                System.out.println("| " + rs.getString(3) + "\t\t|"  + rs.getString(4) + "\t|");
+                                System.out.println("|---------------|---------------|---------------|---------------|---------------|---------------|");
+                            } while (rs.next());
+                        } else {
+                            System.out.println("Null");
+                        }
                         
-                    if(record == 2) {
-                        System.out.println("Please enter the supplier ID:");
-                        suppId = input.nextInt();
-                        if(suppId == s1.getSuppId()) {
-                            System.out.println("ID:" + s1.getSuppId());
-                            System.out.println("Name: " + s1.getSuppName());
-                            System.out.println("Product purchased:" + prod1.getProdName());
-                            System.out.println("Product ID: " + prod1.getProdId());
-                            System.out.println("Quantity:" + prod1.getProdQuant());
-                            System.out.println("Price:" + prod1.getProdPrice());
+                        System.out.println("\n\n|***********************************************************************************************|");
+                        System.out.println("|\t\t\t\t\t    Product   \t\t\t\t\t|");
+                        System.out.println("|***********************************************************************************************|");
+                        System.out.println("| ID\t| Product Name\t| Price\t| Quantity\t\t|");
+                        System.out.println("|===============|===============|===============|===============|===============|===============|");
+                        upSql = "Select * from product";
+                        update = "Select * from product";
+                        rs = statement.executeQuery(upSql);
+                        PreparedStatement pstUP = con.prepareStatement(update);
+                        if (rs.next()) {
+                            do {
+                                System.out.println("| " + rs.getInt(1) + "\t\t|"  + rs.getString(1) + "\t|" + rs.getString(2) + "\t|" + rs.getString(5) + "\t|");
+                                System.out.println("|---------------|---------------|---------------|---------------|---------------|---------------|");
+                            } while (rs.next());
                         } else {
-                            System.out.println("There are no record for this ID");
+                            System.out.println("Null");
                         }
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
-                    if(record == 3) {
-                        System.out.println("Please enter the product ID:");
-                        prodId = input.nextInt();
-                        if(prodId == prod1.getProdId()) {
-                            System.out.println("Product ID:" + prod1.getProdId());
-                            System.out.println("Name:" + prod1.getProdName());
-                            System.out.println("Purchased by:" + s1.getSuppName());
-                            System.out.println("Quantity:" + prod1.getProdQuant());
-                            System.out.println("Price:" + prod1.getProdPrice());
-                        } else {
-                            System.out.println("There are no record for this ID");
-                        }
-                    }
-                    }
+                    break;
+                }
+            
                     
             
         }while( option!=5);
-        // TODO code application logic here 
-        //Create new customer 
-
-         
-
-         
-
-        
-
+        // TODO code application logic here   
     }
-    }
+            }
+    
 
 
  
